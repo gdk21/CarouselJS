@@ -1,0 +1,94 @@
+
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.header__container{
+    position: relative;
+    height: 100vh;
+    .header__container__background{
+        display: flex;
+        .header__container__background__left{
+            height: 100vh;
+            width: 65vw;
+            background-color: grey;
+            z-index:-10;
+        }
+        .header__container__background__right{
+            
+            background-color: red;
+            //width:35vw;
+           flex-grow:1;
+           position:relative;
+           z-index:-10;
+           p{
+            position: absolute;
+            font-size: 40vh;
+            margin:0;
+            opacity: 0.5;
+            transform: rotate(90deg) translateX(45%); 
+            text-transform: uppercase;
+            font-family: 'Roboto';
+            font-weight: bolder;
+            color:red;
+            text-shadow: 0px 0px 50px rgba(0,0,0,0.5);
+            line-height: 0;
+           }
+        }
+    
+    }
+    .header__container__carousel{
+        overflow: hidden;
+        position: absolute;
+        width:80vw;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        .header__container__carousel--wrapper {
+            position: absolute;
+            &:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+        .header__container__carousel--slide{
+            display:inline-flex;
+            float: left;
+            box-sizing: border-box;
+            .header__container__carousel--slide-txt{
+                padding-right: 10vw;
+            }
+        }
+    }
+
+    }
+    .header__container__dots{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        bottom: 20px;
+        height:10vh;
+        top:30%;
+        left:5%;
+        li {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 0 4px;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            &.active,
+            &:hover {
+            opacity: 1;
+            }
+            
+        }
+    }
+
+}
